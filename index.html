@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+
+<head>
+	<title>Parallax</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/miEstilo.css">
+
+</head>
+
+
+<body>
+	<div class="contenedor">
+		<article>
+			<h1>Objetos de Git</h1>
+			<hr>
+			<p>
+			Hay 4 tipos de objetos en git (el más importante a entender es el commit).
+    		Blob: se usa para almacenar datos de archivos, es generalmente un archivo.
+   			Tree: es, básicamente, como un directorio, hace referencia a un conjunto de otros trees y/o blobs (por ej. archivos y subdirectorios).</p>
+
+   			<p>Commit: apunta a un determinado tree, marcando como era en un momento determinado (quien no haya entendido lo que es un tree, sustituya la palabra tree por archivo). Contiene información sobre ese momento determinado, los cambios del autor desde el último commit, el commit anterior (conocido como parent), etc. También se puede entender un commit, de una forma más imprecisa y coloquial, como la modificación o el conjunto de modificaciones a uno o varios archivos del repositorio. Otra forma de entenderlo también sería, como una "foto" de uno o varios archivos del repositorio en un momento determinado.</p>
+
+    		<p>Tag: es una forma de marcar un commit como específico de alguna forma. Se usa normalmente para marcar algunos commits como releases específicos o algo destacable en esas lineas.
+
+			</p>
+		</article>
+
+		<article>
+			<h1>Qué es Github?</h1>
+			<hr>
+			<p>
+			Github es una plataforma de desarrollo colaborativo de software para alojar proyectos usando el sistema de control de versiones Git. El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago. También se pueden obtener repositorios privados (de pago) si se es estudiante.
+
+			Github no sólo ofrece alojamiento del código si no muchas más posibilidades asociadas a los repos como son, forks, issues, pull requests, diffs, etc. Se verán todos con detalle más adelante.</p>
+
+		</article>
+
+		<article>
+			<h1>Qué es una metodología de desarrollo de software en el mundo de la programación y de qué forma vamos a aplicarla?</h1>
+			<hr>
+			<p>
+			Citaré a wikipedia aquí: Metodología de desarrollo de software en ingeniería de software es un marco de trabajo usado para estructurar, planificar y controlar el proceso de desarrollo en sistemas de información.
+
+			Básicamente el punto aquí es controlar el proceso de desarrollo para que sea ordenado y de esta forma lo más productivo posible.
+
+			Esto a primera vista es algo muy simple pero se complica extremadamente dando lugar a diversas metodologías y hay libros muy extensos sobre ello además de mucha controversia sobre cual es la mejor. A nosotros esto nos importa más bien poco pero a donde quiero llegar con esto es a la implementación de una metodología de desarrollo del emulador.
+
+			Este método de desarrollo estaría basado en Git y Github ofreciéndonos una enorme versatilidad y posibilitando que todo el equipo de desarrollo esté al día en cuanto a novedades en el desarrollo así como multitud de ventajas que más adelante explicaré. Esta metodología estaría basada en las branches y pull request.
+
+			</p>
+		</article>
+
+		<article>
+			<h1>Set Up Clave SSH </h1>
+			<hr>
+			<p>
+			
+
+    		Las claves SSH se usan para establecer una conexión segura entre el pc y Github.
+
+			Para crear la clave se ha de seguir los siguientes pasos en terminal (en mac) o en cmd (en windows).
+
+			ssh-keygen -t rsa -C "your_email@youremail.com" (sustituir "your_email@youremail.com" por el email que se puso al crear la cuenta de github).
+
+			Esto devolverá lo siguiente:
+
+			Generating public/private rsa key pair. Enter file in which to save the key. C/Users/your_user_directory/.ssh/id_rsa) Hacemos click en enter porque queremos que guarde la clave en el directorio por defecto. Guardará la clave ssh en el directorio .ssh dentro de nuestra carpeta de usuario.
+
+			Ahora nos dirá: Enter passphrase (empty for no passphrase) No hay por qué indicar nada. Enter.
+
+			Y nos dirá que la volvamos a introducir o darle a enter si lo dejamos en blanco antes.
+
+			Esto devolverá algo así.
+
+			Your identification has been saved in /Users/your_user_directory/.ssh/id_rsa. Your public key has been saved in /Users/your_user_directory/.ssh/id_rsa.pub
+
+			Debemos copiar la clave ssh. Para ello debemos introducir en la terminal lo siguiente o seguir los pasos indicados en windows:
+
+			En Mac: pbcopy < ~/.ssh/id_rsa.pub
+
+			En Windows: dirigirse la gui de git (llamada Git Extensions), ir a Help (Ayuda), Show Key (Mostrar Clave) y entonces presionar Copy to Clipboard (Copiar al portapales) para copiar la clave ssh al portapeles
+
+			</p>
+		</article>
+	</div>
+
+
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+
+</html>
